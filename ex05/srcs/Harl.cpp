@@ -6,7 +6,7 @@
 /*   By: suchua <suchua@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 23:32:04 by suchua            #+#    #+#             */
-/*   Updated: 2023/04/05 00:37:57 by suchua           ###   ########.fr       */
+/*   Updated: 2023/04/11 15:53:32 by suchua           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	Harl::complain(std::string level)
 {
 	for (int i = 0; i < 4; i++)
 		if (level == pairs[i].first)
-			(this->*pairs[i].second)();	
+			(this->*pairs[i].second)();
 }
 
 void	Harl::debug(void)

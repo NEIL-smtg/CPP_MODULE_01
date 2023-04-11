@@ -1,5 +1,4 @@
 NAME		=	zombie
-INCLUDES	=	include/
 SRCS_DIR	=	srcs/
 OBJS_DIR	=	objs/
 FILES		=	main newZombie randomChump Zombie
@@ -14,10 +13,10 @@ all:
 	make $(NAME)
 
 $(NAME):$(OBJS)
-	$(GCPP) $(CFLAGS) -I $(INCLUDES) -o $(NAME) $(OBJS)
+	$(GCPP) $(CFLAGS) -o $(NAME) $(OBJS)
 
 $(OBJS_DIR)%.o:$(SRCS_DIR)%.cpp
-	$(GCPP) $(CFLAGS) -I $(INCLUDES) -c $< -o $@
+	$(GCPP) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS_DIR)

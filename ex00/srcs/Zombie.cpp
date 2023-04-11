@@ -6,7 +6,7 @@
 /*   By: suchua <suchua@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 03:08:46 by suchua            #+#    #+#             */
-/*   Updated: 2023/04/04 03:34:28 by suchua           ###   ########.fr       */
+/*   Updated: 2023/04/11 15:18:37 by suchua           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Zombie::Zombie(void)
 
 Zombie::~Zombie(void)
 {
-	std::cout << "Deleting zombie " << name << std::endl;
+	std::cout << "Zombie " << name << " exiting..." << std::endl;
 }
 
 void	Zombie::announce(void)
