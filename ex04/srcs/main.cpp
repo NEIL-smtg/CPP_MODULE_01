@@ -6,7 +6,7 @@
 /*   By: suchua <suchua@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 05:15:22 by suchua            #+#    #+#             */
-/*   Updated: 2023/04/04 05:59:19 by suchua           ###   ########.fr       */
+/*   Updated: 2023/04/25 17:42:30 by suchua           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void	instr_replace(std::string& line, std::string s1, std::string s2)
 		if ((pos = line.find(s1, pos)) == std::string::npos)
 			return ;
 		pos = line.find(s1, pos);
-		for (size_t i = 0; i < s2.length(); i++)
-			line[pos + i] = s2[i];
+		line.erase(pos, s1.length());
+		line.insert(pos, s2);
 	}
 }
 
 void	replace_str(std::ifstream& infile, char *file, std::string s1, std::string s2)
 {
-	std::ofstream outfile(strcat(file, ".replace"), std::ios::app);
+	std::ofstream outfile(strcat(file, ".replace"), std::ios::trunc);
 	if (!outfile)
 	{
 		std::cout << "Error opening outfile\n";
